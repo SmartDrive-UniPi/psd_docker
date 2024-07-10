@@ -46,8 +46,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update && apt-get install -y ros-jazzy-ros2-control ros-jazzy-ros2-controllers
-COPY ../psd_ws/deps/ /tmp/
-RUN cd /tmp/ && bash ./first_launch_script.sh
+COPY ./deps/ /tmp/
+RUN chmod +x /tmp/first_launch_script.sh && cd /tmp/ && bash ./first_launch_script.sh
 
 RUN usermod -aG dialout ${USERNAME}
 WORKDIR /home/$USERNAME/psd_ws
