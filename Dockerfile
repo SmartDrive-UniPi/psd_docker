@@ -43,6 +43,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     unzip \ 
     tar \
     ros-jazzy-ros-gz \
+    ros-jazzy-gz-ros2-control \
+    ros-jazzy-ros2-control \
+    ros-jazzy-ros2-controllers \
+    ros-jazzy-twist-mux \
+    ros-jazzy-twist-stamper \
     && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update && apt-get install -y ros-jazzy-ros2-control ros-jazzy-ros2-controllers
