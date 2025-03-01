@@ -48,6 +48,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-jazzy-ros2-controllers \
     ros-jazzy-twist-mux \
     ros-jazzy-twist-stamper \
+    libgl1-mesa-dri \
     && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update && apt-get install -y ros-jazzy-ros2-control ros-jazzy-ros2-controllers
